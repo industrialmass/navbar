@@ -4,30 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Responsive Navbar</title>
 </head>
 <body>
-    <header>
-        <img class="logo" alt="logo"><img>
         <nav class="navbar">
-            <ul class="navbar__list">
+            <input class="navbar__checkbox" id="navbar__checkbox" type="checkbox"></input>
+            <ul class="navbar__menu">
                 <li class="navbar__item navbar__item--dropdown"><a class="navbar__text" href="#">ABOUT</a></li>
                 <li class="navbar__item"><a class="navbar__text" href="#">CITY PROFILE</a></li>
                 <li class="navbar__item"><a class="navbar__text" href="#">SERVICES</a></li>
                 <li class="navbar__item"><a class="navbar__text" href="#">PRODUCTS</a></li>
                 <li class="navbar__item"><a class="navbar__text" href="#">NEWS</a></li>
+                <li class="navbar__item"><a class="navbar__text navbar__text--phone" href="#">555-555-5555</a></li>
+                <li class="navbar__item"><button class="navbar__button"><a class="navbar__text navbar_text--button" href="#">CONTACT US</a></button></li>
             </ul>
-            <a class="navbar__text navbar__text--phone"></a>
-            <button class="navbar__button"><a class="navbar__text navbar_text--button" href="#">CONTACT US</a></button>
+            <label class="navbar__hamburger" for="navbar__checkbox">
+                <i class="far fa-caret-square-down fa-2x navbar__hamburger"></i>
+            </label>
         </nav>
     </header>
-    <main class="article">
-        <h1 class="article__heading">Why Lorem Ipsum is the Best</h1>
-        <p class="article__pgraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat culpa nam reprehenderit blanditiis corporis amet aspernatur optio nulla doloremque, iusto quasi unde quod ipsam sit exercitationem, dolores et omnis harum!</p>
-        <p class="article__pgraph">Quaerat iure accusantium adipisci eum pariatur inventore repellendus numquam? In accusamus consequatur deserunt excepturi. Debitis nostrum ratione blanditiis facere sint. Neque deleniti accusantium sunt, velit quo reiciendis tempora dicta a.</p>
-        <p class="article__pgraph">Odio, aut libero veniam eius corrupti reiciendis ea suscipit quaerat esse nihil, ad quibusdam iste natus provident aliquam, magni alias perferendis laborum omnis sunt dolores? Voluptas alias minus accusamus voluptate.</p>
-        <p class="article__pgraph">Facere dolorem necessitatibus ex aliquid qui repellendus ad quas neque, iusto ducimus eaque debitis officiis ut velit? Molestias amet quae eos, nihil facilis quidem id impedit ipsa neque repellendus ipsum!</p>
-    </main>
 </body>
 </html>
