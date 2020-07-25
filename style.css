@@ -1,8 +1,11 @@
 :root {
     font-size: 16px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background: url(background.jpeg) no-repeat center center fixed;
     background-size: cover;
+    --secondary_color: #206a5d;
+    --main_color: rgba(235, 236, 241, 0.671);
+    --third_color: #1f4068;
 }
 
 * {
@@ -10,28 +13,28 @@
 }
 
 .navbar {
-    background-color: rgba(0, 0, 0, 0.897);
+    background-color: var(--main_color);
     width: 100%;
-    position: fixed;
     display: flex;
-    flex-direction: column-reverse;
+    position: fixed;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
 }
 
 .navbar__menu {
-    display: none;
+    background: var(--main_color);
 }
 
 .navbar__checkbox:checked ~ .navbar__menu {
-    display: inline-block;
+    transform: scale(1, 1);
 }
 
-.navbar__hamburger {
+.navbar__icon {
+    color: var(--secondary_color);
+}
+
+.navbar__icon--hamburger {
     margin-left: 0.03rem;
-    color: white;
-}
-
-.navbar__hamburger:hover {
-    cursor: pointer;
 }
 
 .navbar__item {
@@ -40,22 +43,84 @@
 
 .navbar__text {
     text-decoration: none;
-    color: rgb(199, 197, 197);
+    color: var(--secondary_color);
+}
+
+.navbar__text:hover {
+    color: var(--main_color);
+    background-color: var(--secondary_color);
+}
+
+.navbar__phone {
+    margin-left: auto;
+    margin-right: 0.2rem;
 }
 
 .navbar__button {
-    color: rgba(0, 0, 0, 0.897);
-    background-color: rgb(186, 217, 223);
+    border: none;
+    color: var(--main_color);
+    padding: 0.5rem;
+    background-color: var(--third_color);
+    border-radius: 1rem;
+    margin-right: 0.3rem;
 }
 
-.navbar__text--phone {
-    display: none;
+.navbar__button:hover {
+    cursor: pointer;
 }
 
 .navbar_text--button {
-    color: #000000;
+    color: var(--main_color);
 }
 
 .navbar__checkbox {
     display: none;
+}
+
+.navbar__hamburger:hover {
+    cursor: pointer;
+}
+
+@media(max-width:600px) {
+    .navbar__menu {
+        top: 100%;
+        transform: scale(1, 0);
+        transition: transform 300ms ease-in-out;
+        transform-origin: top;
+        position: absolute;
+    }
+
+    .navbar__item--phone {
+        display: none;
+    }
+    
+    .navbar__text--phone {
+        display: none;
+    }
+}
+
+@media(min-width:601px) {
+    .navbar__hamburger {
+        display: none;
+    }
+
+    .navbar__phone {
+        display: none;
+    }
+
+    .navbar__menu {
+        width: 100%;
+    }
+
+    .navbar__list {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar__item--phone {
+        padding: 1em;
+        margin-left: auto;
+    }
 }

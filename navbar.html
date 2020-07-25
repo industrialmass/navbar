@@ -6,24 +6,27 @@
     <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"> 
     <title>Responsive Navbar</title>
 </head>
 <body>
-        <nav class="navbar">
-            <input class="navbar__checkbox" id="navbar__checkbox" type="checkbox"></input>
-            <ul class="navbar__menu">
+    <header class="navbar">
+        <a class="navbar__phone" href="tel:555-555-5555"><i class="fas fa-phone-square fa-2x navbar__icon navbar__icon--phone"></i></a>
+        <input class="navbar__checkbox" id="navbar__checkbox" type="checkbox"></input>
+        <nav class="navbar__menu">
+            <ul class="navbar__list">
                 <li class="navbar__item navbar__item--dropdown"><a class="navbar__text" href="#">ABOUT</a></li>
                 <li class="navbar__item"><a class="navbar__text" href="#">CITY PROFILE</a></li>
                 <li class="navbar__item"><a class="navbar__text" href="#">SERVICES</a></li>
                 <li class="navbar__item"><a class="navbar__text" href="#">PRODUCTS</a></li>
                 <li class="navbar__item"><a class="navbar__text" href="#">NEWS</a></li>
-                <li class="navbar__item"><a class="navbar__text navbar__text--phone" href="#">555-555-5555</a></li>
-                <li class="navbar__item"><button class="navbar__button"><a class="navbar__text navbar_text--button" href="#">CONTACT US</a></button></li>
+                <li class="navbar__item navbar__item--phone"><a class="navbar__text navbar__text--phone" href="tel:555-555-5555">555-555-5555</a></li>
+                <li class="navbar__item navbar__item--button"><button class="navbar__button"><a class="navbar__text navbar_text--button" href="#">CONTACT US</a></button></li>
             </ul>
-            <label class="navbar__hamburger" for="navbar__checkbox">
-                <i class="far fa-caret-square-down fa-2x navbar__hamburger"></i>
-            </label>
         </nav>
+        <label class="navbar__hamburger" for="navbar__checkbox">
+            <i class="far fa-caret-square-down fa-2x navbar__icon navbar__icon--hamburger"></i>
+        </label>
     </header>
 </body>
 </html>
